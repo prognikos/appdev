@@ -40,7 +40,7 @@ List of contents
 	screen.c		contains screen manipulation functions
 	screen.h		contains constant definitions and fucntion declarations
 					of screen.c
-	comm.c			contains sendpost function
+	comm.c			contains sendpost function for sending information for example to a URL
 	comm.h			contains defintions and function declaration of comm.c
 	makefile		contains linking rules, compiling rules, cleaning rules
 					and archiving rules. Also some .o files and the name of
