@@ -1,3 +1,5 @@
+//this file will be used to test functions in screen.c
+
 #include <stdio.h>
 #include <unistd.h>
 #include "screen.h"
@@ -49,63 +51,11 @@ int main(void){
 	getchar();
 	resetcolors();
 	printf("This text is displayed in default color\n");
+*/
 
 
 
-/*
-int main(void){
-	printf("This is the first task of appdev:\n");
-	getchar();
-	clearscreen();
-	int i, j, ff, bb;
-	for(i = 0; i < 20; i++){
-		ff = GREEN;
-		bb = BLACK;
-		setcolors(ff, bg(bb));
-		clearscreen();
-		gotoXY(25 - i, i * 3);
-		printf("HELLO\n");
 
-		for(j = 0; j < 4; j++){
-			ff = RED;
-			bb = BLACK;
-			setcolors(ff, bg(bb));
-			gotoXY(i + 1,( i * 3) + j + 1);
-			printf("%s\n", BAR);
-			gotoXY(i + 2,( i * 3) + j + 1);
-			printf("%s\n", BAR);
-		}
-		sleep(1);
-	}
-
-
-	for(i = 0; i < 25; i++){
-		ff = GREEN;
-		bb = BLACK;
-		setcolors(ff, bg(bb));
-		clearscreen();
-		gotoXY(i,  i * 3 + 60);
-		printf("HELLO\n");
-		
-		for(j = 0; j < 4; j++){
-			ff = RED;
-			bb = BLACK;
-			setcolors(ff, bg(bb));
-			gotoXY(25 - i, (i * 3) + j + 60);
-			printf("%s\n", BAR);
-			gotoXY(25 - (i-1), (i * 3) + j + 60);
-			printf("%s\n", BAR);
-		}
-		sleep(1);
-	}
-	
-
-	getchar();
-	resetcolors();
-	clearscreen();
-	printf("Colors are set back to default\n");
-	getchar();
-}*/
 
 
 

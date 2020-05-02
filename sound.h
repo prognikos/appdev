@@ -24,6 +24,6 @@ typedef struct{
 
 // function declarations
 
-WAVheader readwavhdr(FILE *);
-void displaywavhdr(WAVheader);
-void wavdata(WAVheader, FILE *);
+WAVheader readwavhdr(FILE *fp);
+void displaywavhdr(WAVheader h);
+void wavdata(WAVheader, FILE* fp);

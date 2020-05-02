@@ -2,6 +2,7 @@
 #include <math.h>
 #include "sound.h"
 #include "screen.h"
+#include "comm.h"
 
 //function definitions
 
@@ -31,6 +32,8 @@ void wavdata(WAVheader h, FILE *fp){
 	// (ROOT MEAN SQUARE) formula
 	short samples[SIZE];
 	int peaks = 0, flag = 0;
+	short maxDecibelValue = 0;
+
 	for(int i=0; i<BARS; i++){			// to read 5-sec wave file, we have 40 data
 		fread(samples, sizeof(samples), 1, fp);
 		double sum = 0.0;
@@ -44,6 +47,7 @@ void wavdata(WAVheader h, FILE *fp){
 		printf("dB[%d] = %f\n", i, dB);
 }
 #else
+		
 		if(dB > 70){
 			 setfgcolor(RED);
 			if(flag==0){
@@ -63,10 +67,11 @@ void wavdata(WAVheader h, FILE *fp){
 		printf("Duration: %.3f\n", (double)h.subchunk2Size/h.byteRate);
 		gotoXY(1,150);
 		setfgcolor(YELLOW);
-		printf("Peaks: %d\n", peaks);
+		printf("Number of peaks: %d\n", peaks);
 		resetcolors();
 #endif
 	}
+
 }
 
 //end of file

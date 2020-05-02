@@ -17,19 +17,18 @@ List of contents
 7. Credit and acknowledgments
 
 1. Configuration instructions
-	In this section we should give the users information of how to configure
-	the operating system, software environment, libraries, etc. to run
-	this program.
+	In order to use this application we would need curl library installed on 
+	our system, gcc and php.
 
 2. Installation instructions
-	In this section we should give the users information of how to install
-	application, what files not included in this package should be added.
-	What command / operation should be used to install this application.
+	In order to install this application, we should download the zip file or 
+	clone the repository. Github link: https://github.com/prognikos/appdev,
+	or use the command git clone https://github.com/prognikos/appdev.
 
 3. Operating instructions
-	In this sections we should give the users information of how to run this
-	application, e.g., what command-line argument can be given and what do
-	they mean.
+	In order to build the program, we should type the command make. After make,
+	we can see that files are created. In order to run the program, we should
+	type the command ./sound
 
 4. File manifest
 	We should list all the files of this application here with short
@@ -40,13 +39,18 @@ List of contents
 	screen.c		contains screen manipulation functions
 	screen.h		contains constant definitions and fucntion declarations
 					of screen.c
-	comm.c			contains sendpost function for sending information for example to a URL
+	comm.c			contains a function that sends a POST-request.
 	comm.h			contains defintions and function declaration of comm.c
 	makefile		contains linking rules, compiling rules, cleaning rules
 					and archiving rules. Also some .o files and the name of
 					the executable programm after the make command.
 	testcurl.c		contains a main function of CURL and a URL definition.
-	testscreen.c	contains the main function of our programm.
+	testscreen.c	contains the main function of our programm, which draws
+					animation and some information.
+	main.c			contains the logics of our application
 
 5. Copyright
 	This application follows GPLv2 copyright.
+
+6. Contact information
+	You can contact me at e1900282@edu.vamk.fi

@@ -1,5 +1,16 @@
-#include <stdio.h>
-#include "screen.h"
+//The file contains functions to manipulate screens, such as set foreground
+//color, background color, clearscreen, restore default settings, etc.
+//To enable screen manipulation, we need to use VT100 escape requests
+//see the link: http://www.termsys.demon.co.uk/vtansi.htm
+//use SHIFT_insert ket to paste
+
+
+#include <stdio.h> 	// for printf() function
+#include "screen.h" // contains constants used in this file
+
+// function definitions
+// a function name is an identifier in C, an identifier should start with
+// a letter or an underscore, and followed by letters, digits, underscores
 
 void setfgcolor(int fg){
 	printf("%c[1;%dm", ESC, fg);

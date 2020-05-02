@@ -1,14 +1,11 @@
+//Usually in a header file, following information are included
+// 1. function declarations
+// 2. constant definitions
+// 3. conditional compilation (will be discussed later)
 
-
-
-
-
-
-
-
-
+// constant definitions
 #define ESC 0x1B
-
+// #define BLACK 30, instead of using #define , it's better to use enumeration
 enum FG{BLACK=30,RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE};
 #define bg(c) (c+10)  //macro definition
 #define UNICODE  //for conditional compilation

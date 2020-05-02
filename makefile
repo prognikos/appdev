@@ -1,4 +1,4 @@
-OBJ = screen.o main.o comm.o sound.o
+OBJ = screen.o main.o comm.o sound.o 
 APPNAME = sound
 
 #linking rule
